@@ -15,8 +15,8 @@ spec:
         app: loksai-eta-app
     spec:
       containers:
-      - name: loksai-eta-container
-        image: loksaieta/sa-wd-webapp
+      - name: gaurav4docker-container
+        image: gaurav4docker/sa-javabuildenv-img:v1.1
         ports:
         - containerPort: 8080
 ---
@@ -25,7 +25,7 @@ kind: Service
 metadata:
   name: loksai-eta-np-service
   labels:
-    app: loksai-eta-app
+    app: loksai-eta-np-app
 spec:
   selector:
     app: loksai-eta-deploy-lbl
